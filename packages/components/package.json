@@ -1,0 +1,29 @@
+{
+  "name": "rty-ui-plus",
+  "version": "0.0.1",
+  "description": "rty vue3 ui",
+  "main": "lib/index.js",
+  "module":"es/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgsrty/rty-ui-plus.git"
+  },
+  "keywords": [
+    "rty",
+    "ui",
+    "vue3"
+  ],
+  "author": "rty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgsrty/rty-ui-plus/issues"
+  },
+  "homepage": "https://github.com/jgsrty/rty-ui-plus#readme"
+}
