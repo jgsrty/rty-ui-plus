@@ -1,6 +1,7 @@
 {
   "name": "rty-ui-plus-workspace",
   "version": "1.0.0",
+  "packageManager": "pnpm@6.32.3",
   "description": "vue3 component ",
   "main": "index.js",
   "scripts": {
