@@ -1,2 +1,4 @@
 node_modules
 .pnpm-debug.log*
+packages/components/es
+packages/components/lib
