@@ -5,4 +5,5 @@ import 'rty-ui-plus/es/style.css'
 
 const app = createApp(App);
 
+// app.mount("#app");
 app.use(rtyUiPlus).mount("#app");

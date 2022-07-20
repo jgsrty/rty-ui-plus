@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper.490bd105.js";import{o,c as s,p as c,a,b as _}from"./index.1d961415.js";const n={},r=t=>(c("data-v-c34e3470"),t=t(),a(),t),d={class:"main"},p=r(()=>_("button",{class:"test"},"test-btn",-1)),i=[p];function f(t,m){return o(),s("div",d,i)}var u=e(n,[["render",f],["__scopeId","data-v-c34e3470"]]);export{u as default};

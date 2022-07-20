@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "demo:dev": "vite"
+    "demo:dev": "vite",
+    "demo:build": "vite build",
+    "demo:preview": "vite preview"
   },
   "author": "rty",
   "license": "ISC",
