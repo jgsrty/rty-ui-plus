@@ -7,5 +7,9 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@import "./index.scss";
+.main {
+  .test {
+    color: lightblue
+  }
+}
 </style>
