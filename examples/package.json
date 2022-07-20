@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "demo:dev": "vite",
-    "demo:build": "vite build",
-    "demo:preview": "vite preview"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "rty",
   "license": "ISC",
   "dependencies": {
-    "rty-ui-plus": "workspace:^0.0.1"
+    "rty-ui-plus": "workspace:*"
   }
 }
