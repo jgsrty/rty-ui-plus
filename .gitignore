@@ -1,9 +1,2 @@
 node_modules
 .pnpm-debug.log*
-
-packages/components/es
-packages/components/lib
-
-docs/.vitepress/dist
-
-examples/dist
