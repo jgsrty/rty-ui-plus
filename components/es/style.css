@@ -1,4 +1,4 @@
-.rty-button[data-v-710e52be] {
+.rty-button[data-v-5880e77b] {
   color: #fff;
   position: relative;
   font-weight: 400;
@@ -15,10 +15,10 @@
   transform: translate3d(0, 0, 0);
   transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
 }
-.rty-button[data-v-710e52be]:hover {
+.rty-button[data-v-5880e77b]:hover {
   opacity: 0.9;
 }
-.rty-button[data-v-710e52be]:before {
+.rty-button[data-v-5880e77b]:before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -32,60 +32,60 @@
   opacity: 0;
   content: " ";
 }
-.rty-button[data-v-710e52be]:active::before {
+.rty-button[data-v-5880e77b]:active::before {
   opacity: 0.1;
 }
-.rty-button-primary[data-v-710e52be] {
+.rty-button-primary[data-v-5880e77b] {
   background: #1989fa;
   border-color: #1989fa;
 }
-.rty-button-info[data-v-710e52be] {
+.rty-button-info[data-v-5880e77b] {
   background: #e6ebf1;
   border-color: #e6ebf1;
   color: #606266;
 }
-.rty-button-info[data-v-710e52be]:hover {
+.rty-button-info[data-v-5880e77b]:hover {
   border-color: #1989fa;
   color: #1989fa;
 }
-.rty-button-success[data-v-710e52be] {
+.rty-button-success[data-v-5880e77b] {
   background: #19be6b;
   border-color: #19be6b;
 }
-.rty-button-warning[data-v-710e52be] {
+.rty-button-warning[data-v-5880e77b] {
   background: #ff9900;
   border-color: #ff9900;
 }
-.rty-button-large[data-v-710e52be] {
+.rty-button-large[data-v-5880e77b] {
   font-size: 20px;
 }
-.rty-button-normal[data-v-710e52be] {
+.rty-button-normal[data-v-5880e77b] {
   font-size: 18px;
 }
-.rty-button-small[data-v-710e52be] {
+.rty-button-small[data-v-5880e77b] {
   font-size: 14px;
 }
-.rty-button-mini[data-v-710e52be] {
+.rty-button-mini[data-v-5880e77b] {
   font-size: 12px;
 }
-.is-disabled[data-v-710e52be] {
+.is-disabled[data-v-5880e77b] {
   cursor: not-allowed;
   opacity: 0.5;
 }
-.is-disabled[data-v-710e52be]:hover {
+.is-disabled[data-v-5880e77b]:hover {
   opacity: 0.5;
 }
-.is-disabled[data-v-710e52be]:before {
+.is-disabled[data-v-5880e77b]:before {
   opacity: 0;
 }
-.is-disabled[data-v-710e52be]:active::before {
+.is-disabled[data-v-5880e77b]:active::before {
   opacity: 0;
 }
-.info-no-hover[data-v-710e52be] {
+.info-no-hover[data-v-5880e77b] {
   border-color: #e6ebf1;
   color: #606266;
 }
-.info-no-hover[data-v-710e52be]:hover {
+.info-no-hover[data-v-5880e77b]:hover {
   border-color: #e6ebf1;
   color: #606266;
 }.main .test[data-v-79ff8842] {

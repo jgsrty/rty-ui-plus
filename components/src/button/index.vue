@@ -65,7 +65,7 @@ const handleClick = (e) => emit("click", e);
 
 nextTick(() => {
   if (props.disabled && props.type === "info") {
-    btnRef.value.classList.add("info-no-hover");
+    btnRef.value?.classList.add("info-no-hover");
   }
 });
 </script>

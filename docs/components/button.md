@@ -1,7 +1,7 @@
 # Button 按钮
 
 <script setup>
-import { rtyButton,rtyConfirm } from 'rty-ui-plus'
+import { rtyButton } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
 </script>
 

@@ -50,8 +50,9 @@ const _sfc_main = {
     const btnRef = vue.ref();
     const handleClick = (e) => emit("click", e);
     vue.nextTick(() => {
+      var _a;
       if (props.disabled && props.type === "info") {
-        btnRef.value.classList.add("info-no-hover");
+        (_a = btnRef.value) == null ? void 0 : _a.classList.add("info-no-hover");
       }
     });
     return (_ctx, _cache) => {
@@ -67,5 +68,5 @@ const _sfc_main = {
     };
   }
 };
-var Button = /* @__PURE__ */ pluginVue_exportHelper(_sfc_main, [["__scopeId", "data-v-710e52be"]]);
+var Button = /* @__PURE__ */ pluginVue_exportHelper(_sfc_main, [["__scopeId", "data-v-5880e77b"]]);
 module.exports = Button;

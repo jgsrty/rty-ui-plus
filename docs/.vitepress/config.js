@@ -2,7 +2,8 @@
 // const fs = require("fs");
 
 export default {
-  base: process.env.NODE_ENV === "production" ? "/rty-ui-plus/" : "",
+  base: "/rty-ui-plus/",
+  // base: process.env.NODE_ENV === "production" ? "/rty-ui-plus/" : "",
   title: "rty-ui-plus",
   appearance: true,
   themeConfig: {
