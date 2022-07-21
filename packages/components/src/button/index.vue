@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 .main {
   .test {
-    color: lightblue
+    color: $primary
   }
 }
 </style>
