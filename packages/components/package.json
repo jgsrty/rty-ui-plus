@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "module":"es/index.js",
   "scripts": {
+    "start": "vite",
     "build": "vite build"
   },
   "files": [
