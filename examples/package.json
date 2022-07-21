@@ -1,0 +1,16 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "author": "rty",
+  "license": "ISC",
+  "dependencies": {
+    "rty-ui-plus": "workspace:*"
+  }
+}
