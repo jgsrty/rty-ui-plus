@@ -6,6 +6,7 @@
 <script setup>
 import { rtyButton,rtyConfirm } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
+console.log('fix10')
 </script>
 
 ```js
