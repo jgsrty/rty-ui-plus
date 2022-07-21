@@ -1,18 +1,18 @@
-# test
+---
+layout: home
 
-<rty-button size="mini">哈哈</rty-button>
-<rty-confirm></rty-confirm>
-
+hero:
+  name: rty-ui-plus
+  text: support Vue3
+  tagline: developing...
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /components/getting-start
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/jgsrty/rty-ui-plus
+---
 <script setup>
-import { rtyButton,rtyConfirm } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
-console.log('fix10')
 </script>
-
-```js
-<rty-button></rty-button>
-
-<script setup>
-import {rtyButton} from 'rty-ui-plus'
-</script>
-```
