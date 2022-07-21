@@ -11,6 +11,6 @@
   "author": "rty",
   "license": "ISC",
   "dependencies": {
-    "rty-ui-plus": "workspace:^0.0.2"
+    "rty-ui-plus": "workspace:*"
   }
 }

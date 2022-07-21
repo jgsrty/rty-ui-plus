@@ -18,13 +18,13 @@ importers:
 
   docs:
     specifiers:
-      rty-ui-plus: workspace:^0.0.2
+      rty-ui-plus: workspace:*
     dependencies:
       rty-ui-plus: link:../packages/components
 
   examples:
     specifiers:
-      rty-ui-plus: workspace:^0.0.2
+      rty-ui-plus: workspace:*
     dependencies:
       rty-ui-plus: link:../packages/components
 
@@ -144,7 +144,7 @@ packages:
     dev: true
 
   /@babel/helper-validator-identifier/7.18.6:
-    resolution: {integrity: sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==, tarball: https://npmjs.swhysc.tech:443/@babel%2fhelper-validator-identifier/-/helper-validator-identifier-7.18.6.tgz}
+    resolution: {integrity: sha512-MmetCkz9ej86nJQV+sFCxoGGrUbU3q02kgLciwkrt9QqEB7cP39oKEY0PakknEO0Gu20SskMRi+AYZ3b1TpN9g==}
     engines: {node: '>=6.9.0'}
     dev: true
 
@@ -157,7 +157,7 @@ packages:
     dev: true
 
   /@babel/types/7.18.9:
-    resolution: {integrity: sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==, tarball: https://npmjs.swhysc.tech:443/@babel%2ftypes/-/types-7.18.9.tgz}
+    resolution: {integrity: sha512-WwMLAg2MvJmt/rKEVQBBhIVffMmnilX4oe0sRe7iPOHIGsqpruFHHdrfj4O1CMMtgMtCU4oPafZjDPCRgO57Wg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.18.6
@@ -784,7 +784,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=, tarball: https://npmjs.swhysc.tech:443/to-fast-properties/-/to-fast-properties-2.0.0.tgz}
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
     engines: {node: '>=4'}
     dev: true
 
