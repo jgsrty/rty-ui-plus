@@ -18,13 +18,13 @@ importers:
 
   docs:
     specifiers:
-      rty-ui-plus: workspace:*
+      rty-ui-plus: workspace:^0.0.2
     dependencies:
       rty-ui-plus: link:../packages/components
 
   examples:
     specifiers:
-      rty-ui-plus: workspace:*
+      rty-ui-plus: workspace:^0.0.2
     dependencies:
       rty-ui-plus: link:../packages/components
 
