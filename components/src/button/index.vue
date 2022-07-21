@@ -1,5 +1,10 @@
 <template>
-  <button ref="btnRef" @click="handleClick" :class="[component, typeClass, sizeClass, { 'is-disabled': disabled }]" :disabled="disabled">
+  <button
+    ref="btnRef"
+    @click="handleClick"
+    :class="classes"
+    :disabled="disabled"
+  >
     <slot />
   </button>
 </template>
@@ -10,11 +15,18 @@ const sizes = ["large", "normal", "small", "mini"];
 </script>
 
 <script setup>
-import { ref, nextTick } from "vue";
+import { ref, nextTick, computed } from "vue";
 
 const component = "rty-button";
-const typeClass = component + "-" + props.type;
-const sizeClass = component + "-" + props.size;
+
+const classes = computed(() => {
+  return [
+    component,
+    `${component}-${props.type}`,
+    `${component}-${props.size}`,
+    { "is-disabled": props.disabled },
+  ];
+});
 
 const btnRef = ref();
 
@@ -52,9 +64,8 @@ const emit = defineEmits(["click"]);
 const handleClick = (e) => emit("click", e);
 
 nextTick(() => {
-  if (!props.disabled && props.type === "info") {
+  if (props.disabled && props.type === "info") {
     btnRef.value.classList.add("info-no-hover");
-    console.log(btnRef.value.classList);
   }
 });
 </script>

@@ -1,6 +1,6 @@
 # test
 
-<rty-button></rty-button>
+<rty-button size="mini">哈哈</rty-button>
 <rty-confirm></rty-confirm>
 
 <script setup>

@@ -1,6 +1,6 @@
 <template>
   <div>启动测试</div>
-  <rty-button type="primary" size="mini">test</rty-button>
+  <rty-button type="primary" size="large">test</rty-button>
   <rty-confirm></rty-confirm>
 </template>
 

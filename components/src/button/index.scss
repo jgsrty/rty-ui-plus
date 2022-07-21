@@ -14,9 +14,11 @@
   border-radius: 4px;
   transform: translate3d(0, 0, 0);
   transition: color 0.2s linear, background-color 0.2s linear, border 0.2s linear;
+
   &:hover {
     opacity: 0.9;
   }
+
   &:before {
     position: absolute;
     top: 50%;
@@ -31,39 +33,49 @@
     opacity: 0;
     content: " ";
   }
+
   &:active::before {
     opacity: 0.1;
   }
+
   &-primary {
     background: $primary-color;
     border-color: $primary-color;
   }
+
   &-info {
     background: $info-color;
     border-color: $info-color;
     color: $regular-text;
+
     &:hover {
       border-color: $primary-color;
       color: $primary-color;
     }
   }
+
   &-success {
     background: $success-color;
     border-color: $success-color;
   }
+
   &-warning {
     background: $warning-color;
     border-color: $warning-color;
   }
+
   &-large {
     font-size: $large;
   }
+
   &-normal {
     font-size: $normal;
   }
+
   &-small {
     font-size: $small;
   }
+
   &-mini {
     font-size: $mini;
   }
@@ -72,12 +84,26 @@
 .is-disabled {
   cursor: not-allowed;
   opacity: 0.5;
+
   &:hover {
     opacity: 0.5;
+  }
+
+  &:before {
+    opacity: 0;
+  }
+
+  &:active::before {
+    opacity: 0;
   }
 }
 
 .info-no-hover {
   border-color: $info-color;
   color: $regular-text;
+
+  &:hover {
+    border-color: $info-color;
+    color: $regular-text;
+  }
 }

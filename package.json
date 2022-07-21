@@ -7,9 +7,10 @@
   "scripts": {
     "docs:start": "pnpm -C ./docs start",
     "exam:start": "pnpm -C ./examples start",
+    "comp:start": "pnpm -C ./components start",
     "docs:build": "pnpm -C ./docs build",
     "exam:build": "pnpm -C ./examples build",
-    "comp:build": "pnpm -C ./packages/components build",
+    "comp:build": "pnpm -C ./components build",
     "docs:preview": "pnpm -C ./docs preview",
     "exam:preview": "pnpm -C ./examples preview",
     "clean": "rm -rf node_modules */node_modules"
