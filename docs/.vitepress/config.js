@@ -1,16 +1,15 @@
-// const path = require("path");
-// const fs = require("fs");
+const path = require("path");
+const fs = require("fs");
 
 export default {
   // base: "/rty-ui-plus/",
   base: process.env.NODE_ENV === "production" ? "/rty-ui-plus/" : "",
   title: "rty-ui-plus",
+  lastUpdated: true,
   appearance: true,
   themeConfig: {
     lastUpdatedText: "Updated Date",
-    socialLinks: [
-      { icon: "github", link: "https://github.com/jgsrty/rty-ui-plus" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/jgsrty/rty-ui-plus" }],
     nav: nav(),
     sidebar: {
       "/components/": [
@@ -19,26 +18,13 @@ export default {
           items: [
             {
               text: "快速开始",
-              link: "/components/getting-start",
+              link: "/components/guide/getting-start",
             },
           ],
         },
         {
           text: "Components 组件",
-          items: [
-            {
-              text: "Button 按钮",
-              link: "/components/button",
-            },
-            {
-              text: "Icon 图标",
-              link: "/components/icon",
-            },
-            {
-              text: "Confirm 按钮",
-              link: "/components/confirm",
-            },
-          ],
+          items: getSidebar("components"),
         },
       ],
     },
@@ -53,7 +39,7 @@ function nav() {
   return [
     {
       text: "Vue3 组件",
-      link: "/components/getting-start",
+      link: "/components/guide/getting-start",
       activeMatch: "/components/",
     },
     {
@@ -72,17 +58,21 @@ function nav() {
   ];
 }
 
-// function getSidebar(dir) {
-//   let group = [];
-//   let p = path.join(__dirname, "../", dir);
-//   let files = fs.readdirSync(p);
-//   files.map((file) => {
-//     let title = path.basename(file, ".md");
-//     let text = "";
-//     let link = "";
-//     text = title;
-//     link = "/" + dir + "/" + title;
-//     group.push({ text, link });
-//   });
-//   return group;
-// }
+function getSidebar(dir) {
+  let group = [];
+  let p = path.join(__dirname, "../", dir);
+  let files = fs.readdirSync(p);
+  files.map((file) => {
+    let isFile = fs.lstatSync(path.join(p, file)).isFile();
+    // 只读取文件
+    if (isFile) {
+      let title = path.basename(file, ".md");
+      let text = "";
+      let link = "";
+      text = title;
+      link = "/" + dir + "/" + title;
+      group.push({ text, link });
+    }
+  });
+  return group;
+}

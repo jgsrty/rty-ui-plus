@@ -3,7 +3,10 @@
 ## 图标集合
 
 <div class="icon-list">
-  <rty-svg v-for="item in svgArr" :key="item" :name="item"/>
+  <div v-for="item in svgArr" :key="item">
+    <rty-svg :name="item"/>
+    <span>{{item}}</span>
+  </div>
 </div>
 
 <script setup>

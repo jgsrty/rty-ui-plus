@@ -13,5 +13,5 @@ const _hoisted_3 = [
 function render(_ctx, _cache) {
   return openBlock(), createElementBlock("svg", _hoisted_1, _hoisted_3);
 }
-var sad = { render };
-export { sad as default, render };
+var userSad = { render };
+export { userSad as default, render };

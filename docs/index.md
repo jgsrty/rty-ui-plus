@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /components/getting-start
+      link: /components/guide/getting-start
     - theme: alt
       text: View on GitHub
       link: https://github.com/jgsrty/rty-ui-plus

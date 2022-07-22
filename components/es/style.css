@@ -1,4 +1,9 @@
-.rty-button[data-v-5880e77b] {
+.main .test[data-v-79ff8842] {
+  color: red;
+}.svg-icon[data-v-0f8a2d96] {
+  width: var(--af29aebe);
+  height: var(--af29aebe);
+}.rty-button[data-v-5880e77b] {
   color: #fff;
   position: relative;
   font-weight: 400;
@@ -88,9 +93,48 @@
 .info-no-hover[data-v-5880e77b]:hover {
   border-color: #e6ebf1;
   color: #606266;
-}.main .test[data-v-79ff8842] {
-  color: red;
-}.svg-icon[data-v-0f8a2d96] {
-  width: var(--af29aebe);
-  height: var(--af29aebe);
+}.rty-message[data-v-beb0eaba] {
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  padding: 15px 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+.rty-message span[data-v-beb0eaba] {
+  padding-left: 10px;
+  flex: 1;
+}
+.rty-message-success[data-v-beb0eaba] {
+  color: #19be6b;
+  background: #f0f9eb;
+  border: 1px solid #e1f3d8;
+}
+.rty-message-plain[data-v-beb0eaba] {
+  color: #909399;
+  background: #f4f4f5;
+  border: 1px solid #e9e9eb;
+}
+.rty-message-warning[data-v-beb0eaba] {
+  color: #ff9900;
+  background: #fdf6ec;
+  border: 1px solid #faecd8;
+}
+.rty-message-error[data-v-beb0eaba] {
+  color: #f56c6c;
+  background: #fef0f0;
+  border: 1px solid #fde2e2;
+}
+.fade-enter-active[data-v-beb0eaba],
+.fade-leave-active[data-v-beb0eaba] {
+  transition: all 0.4s;
+}
+.fade-enter-from[data-v-beb0eaba],
+.fade-leave-to[data-v-beb0eaba] {
+  opacity: 0;
+  transform: translate3d(-50%, -100px, 0);
 }

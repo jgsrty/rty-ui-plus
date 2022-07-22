@@ -22,3 +22,5 @@ export {
   rtyConfirm,
   rtySvg
 }
+
+export { rtyMessage } from './src/message'

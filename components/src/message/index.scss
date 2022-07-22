@@ -1,0 +1,46 @@
+.rty-message {
+  position: fixed;
+  left: 50%;
+  top: 50px;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  padding: 15px 20px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  z-index: 99;
+  span {
+    padding-left: 10px;
+    flex: 1;
+  }
+  &-success {
+    color: $success-color;
+    background: #f0f9eb;
+    border: 1px solid #e1f3d8;
+  }
+  &-plain {
+    color: $plain-color;
+    background: #f4f4f5;
+    border: 1px solid #e9e9eb;
+  }
+  &-warning {
+    color: $warning-color;
+    background: #fdf6ec;
+    border: 1px solid #faecd8;
+  }
+  &-error {
+    color: $error-color;
+    background: #fef0f0;
+    border: 1px solid #fde2e2;
+  }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, -100px, 0);
+}
