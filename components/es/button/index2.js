@@ -1,15 +1,37 @@
-import { computed, ref, nextTick, openBlock, createElementBlock, normalizeClass, unref, renderSlot } from "vue";
+import { computed, ref, nextTick, openBlock, createElementBlock, normalizeClass, unref, createBlock, createCommentVNode, renderSlot } from "vue";
+import rtySvg from "../svg/index2.js";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
-import _export_sfc from "../../_virtual/plugin-vue_export-helper.js";
+import _export_sfc from "../_virtual/plugin-vue_export-helper.js";
 const _hoisted_1 = ["disabled"];
 const types = ["primary", "info", "success", "warning"];
-const sizes = ["large", "normal", "small", "mini"];
+const sizes = {
+  large: {
+    val: "large",
+    iconSize: 20
+  },
+  normal: {
+    val: "normal",
+    iconSize: 18
+  },
+  small: {
+    val: "small",
+    iconSize: 14
+  },
+  mini: {
+    val: "mini",
+    iconSize: 12
+  }
+};
 const _sfc_main = {
   __name: "index",
   props: {
     disabled: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ""
     },
     type: {
       type: String,
@@ -26,9 +48,10 @@ const _sfc_main = {
       type: String,
       default: "normal",
       validator(val) {
-        const res = sizes.indexOf(val) > -1;
+        const keys = Object.keys(sizes);
+        const res = keys.indexOf(val) > -1;
         if (!res) {
-          throw new Error(`size\u5FC5\u987B\u662F${sizes.join("||")}\u4E2D\u7684\u4E00\u4E2A`);
+          throw new Error(`size\u5FC5\u987B\u662F${keys.join("||")}\u4E2D\u7684\u4E00\u4E2A`);
         }
         return res;
       }
@@ -62,10 +85,15 @@ const _sfc_main = {
         class: normalizeClass(unref(classes)),
         disabled: __props.disabled
       }, [
+        __props.icon ? (openBlock(), createBlock(rtySvg, {
+          key: 0,
+          size: sizes[__props.size].iconSize,
+          name: __props.icon
+        }, null, 8, ["size", "name"])) : createCommentVNode("", true),
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ], 10, _hoisted_1);
     };
   }
 };
-var Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5880e77b"]]);
+var Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5e54b199"]]);
 export { Button as default };

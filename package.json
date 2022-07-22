@@ -35,5 +35,8 @@
     "vite": "^2.9.1",
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "@vueuse/core": "^8.9.4"
   }
 }

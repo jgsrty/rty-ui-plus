@@ -1,6 +1,6 @@
 import { openBlock, createElementBlock, pushScopeId, popScopeId, createElementVNode } from "vue";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
-import _export_sfc from "../../_virtual/plugin-vue_export-helper.js";
+import _export_sfc from "../_virtual/plugin-vue_export-helper.js";
 const _sfc_main = {};
 const _withScopeId = (n) => (pushScopeId("data-v-79ff8842"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "main" };

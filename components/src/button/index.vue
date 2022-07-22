@@ -5,17 +5,36 @@
     :class="classes"
     :disabled="disabled"
   >
+    <rty-svg :size="sizes[size].iconSize" :name="icon" v-if="icon"></rty-svg>
     <slot />
   </button>
 </template>
 
 <script>
 const types = ["primary", "info", "success", "warning"];
-const sizes = ["large", "normal", "small", "mini"];
+const sizes = {
+  large: {
+    val: "large",
+    iconSize: 20,
+  },
+  normal: {
+    val: "normal",
+    iconSize: 18,
+  },
+  small: {
+    val: "small",
+    iconSize: 14,
+  },
+  mini: {
+    val: "mini",
+    iconSize: 12,
+  },
+}
 </script>
 
 <script setup>
 import { ref, nextTick, computed } from "vue";
+import rtySvg from "../svg/index.vue";
 
 const component = "rty-button";
 
@@ -35,6 +54,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  icon: {
+    type: String,
+    default: "",
+  },
   type: {
     type: String,
     default: "primary",
@@ -50,9 +73,10 @@ const props = defineProps({
     type: String,
     default: "normal",
     validator(val) {
-      const res = sizes.indexOf(val) > -1;
+      const keys = Object.keys(sizes);
+      const res = keys.indexOf(val) > -1;
       if (!res) {
-        throw new Error(`size必须是${sizes.join("||")}中的一个`);
+        throw new Error(`size必须是${keys.join("||")}中的一个`);
       }
       return res;
     },
