@@ -1,6 +1,7 @@
 <template>
   <div>启动测试</div>
-  <rty-button type="primary" size="large">发的送</rty-button>
+  <rty-svg name="wall" :size="30" color="lightblue"></rty-svg>
+  <!-- <rty-button type="primary" size="large">发的送</rty-button>
   <rty-button type="info" size="normal">发的送</rty-button>
   <rty-button type="success" size="small">发的送</rty-button>
   <rty-button type="warning" size="mini" @click="test">发的送</rty-button>
@@ -8,7 +9,7 @@
   <rty-button type="info" size="normal" disabled>发的送</rty-button>
   <rty-button type="success" size="small" disabled>发的送</rty-button>
   <rty-button type="warning" size="mini" disabled @click="test">发的送</rty-button>
-  <rty-confirm></rty-confirm>
+  <rty-confirm></rty-confirm> -->
 </template>
 
 <script setup>

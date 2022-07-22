@@ -2,8 +2,8 @@
 // const fs = require("fs");
 
 export default {
-  base: "/rty-ui-plus/",
-  // base: process.env.NODE_ENV === "production" ? "/rty-ui-plus/" : "",
+  // base: "/rty-ui-plus/",
+  base: process.env.NODE_ENV === "production" ? "/rty-ui-plus/" : "",
   title: "rty-ui-plus",
   appearance: true,
   themeConfig: {
@@ -29,6 +29,10 @@ export default {
             {
               text: "Button 按钮",
               link: "/components/button",
+            },
+            {
+              text: "Icon 图标",
+              link: "/components/icon",
             },
             {
               text: "Confirm 按钮",

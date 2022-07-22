@@ -90,4 +90,7 @@
   color: #606266;
 }.main .test[data-v-79ff8842] {
   color: red;
+}.svg-icon[data-v-0f8a2d96] {
+  width: var(--af29aebe);
+  height: var(--af29aebe);
 }

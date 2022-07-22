@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import svgLoader from "vite-svg-loader";
 const path = require("path");
 
 export default defineConfig({
@@ -26,15 +27,15 @@ export default defineConfig({
           dir: "es",
           preserveModulesRoot: "src",
         },
-        {
-          format: "cjs",
-          entryFileNames: "[name].js",
-          //让打包目录和我们目录对应
-          preserveModules: true,
-          //配置打包根目录
-          dir: "lib",
-          preserveModulesRoot: "src",
-        },
+        // {
+        //   format: "cjs",
+        //   entryFileNames: "[name].js",
+        //   //让打包目录和我们目录对应
+        //   preserveModules: true,
+        //   //配置打包根目录
+        //   dir: "lib",
+        //   preserveModulesRoot: "src",
+        // },
       ],
     },
     lib: {
@@ -42,7 +43,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
   },
-  plugins: [vue()],
+  plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -3,14 +3,13 @@
   "version": "0.0.3",
   "description": "rty vue3 ui",
   "main": "lib/index.js",
-  "module":"es/index.js",
+  "module": "es/index.js",
   "scripts": {
     "start": "vite",
     "build": "vite build"
   },
   "files": [
-    "es",
-    "lib"
+    "es"
   ],
   "repository": {
     "type": "git",
@@ -26,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/jgsrty/rty-ui-plus/issues"
   },
-  "homepage": "https://github.com/jgsrty/rty-ui-plus#readme"
+  "homepage": "https://github.com/jgsrty/rty-ui-plus#readme",
+  "devDependencies": {
+    "vite-svg-loader": "^3.4.0"
+  }
 }
