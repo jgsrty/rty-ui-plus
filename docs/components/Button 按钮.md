@@ -66,11 +66,12 @@ import 'rty-ui-plus/es/style.css'
 
 ## Button 属性
 
-| 属性     | 说明     | 类型    | 可选值                             | 默认值  |
-| -------- | -------- | ------- | ---------------------------------- | ------- |
-| type     | 类型     | string  | primary / info / success / warning | primary |
-| size     | 尺寸     | string  | large / normal / small / mini      | normal  |
-| disabled | 是否禁用 | boolean | --                                 | false   |
+| 属性     | 说明     | 类型    | 可选值                              | 默认值  |
+| -------- | -------- | ------- | ----------------------------------- | ------- |
+| type     | 类型     | string  | primary / info / success / warning  | primary |
+| size     | 尺寸     | string  | large / normal / small / mini       | normal  |
+| disabled | 是否禁用 | boolean | --                                  | false   |
+| icon     | 图标     | string  | [foo](/components/Icon%20图标.html) | --      |
 
 <style lang="scss" scoped>
 .group-list {
