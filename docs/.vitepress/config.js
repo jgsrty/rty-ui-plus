@@ -45,14 +45,12 @@ function nav() {
     {
       text: "了解更多",
       items: [
-        { text: "掘金", link: "https://juejin.cn/user/2154698520407687/posts" },
-        { text: "码云gitee", link: "https://gitee.com/RtyXmd" },
-        { text: "简书", link: "https://www.jianshu.com/u/0f735486a824" },
-        { text: "移动端Music", link: "http://47.100.53.108:7300/#/index" },
+        { text: "移动端", link: "http://47.100.53.108:7300/#/index" },
         {
           text: "管理后台模板",
           link: "http://47.100.53.108:9527/#/charts/pieChart",
         },
+        { text: "掘金", link: "https://juejin.cn/user/2154698520407687/posts" },
       ],
     },
   ];

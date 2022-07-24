@@ -6,10 +6,13 @@
 
 ```js
 <script setup>
-  import {(rtyMessage, rtyButton)} from 'rty-ui-plus' const testMsg = () =>{" "}
-  {rtyMessage({
-    message: "success",
-  })}
+import {(rtyMessage, rtyButton)} from 'rty-ui-plus' 
+
+const testMsg = () => {
+  rtyMessage({
+    message:'Text Message'
+  })
+}
 </script>
 ```
 
