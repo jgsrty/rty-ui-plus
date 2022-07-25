@@ -3,6 +3,7 @@
 <script setup>
 import { rtyButton, rtySvg } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
+import commentComp from '../vueComponents/comment.vue'
 </script>
 
 ## 基础用法
@@ -80,6 +81,8 @@ import 'rty-ui-plus/es/style.css'
   align-items:center
 }
 </style>
+
+<commentComp />
 
 <!-- | 属性 | 说明 | 类型 | 可选值 | 默认值 |
 | ---- | ---- | ---- | ------ | ------ |
