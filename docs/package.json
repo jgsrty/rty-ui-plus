@@ -14,6 +14,7 @@
   "author": "rty",
   "license": "ISC",
   "dependencies": {
+    "gitalk": "^1.7.2",
     "rty-ui-plus": "workspace:*"
   }
 }
