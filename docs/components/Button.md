@@ -72,7 +72,7 @@ import commentComp from '../vueComponents/comment.vue'
 | type     | 类型     | string  | primary / info / success / warning  | primary |
 | size     | 尺寸     | string  | large / normal / small / mini       | normal  |
 | disabled | 是否禁用 | boolean | --                                  | false   |
-| icon     | 图标     | string  | [foo](/components/Icon%20图标.html) | --      |
+| icon     | 图标     | string  | [foo](/components/Icon.html) | --      |
 
 <style lang="scss" scoped>
 .group-list {
