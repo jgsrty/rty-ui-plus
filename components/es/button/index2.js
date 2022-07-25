@@ -95,5 +95,5 @@ const _sfc_main = {
     };
   }
 };
-var Button = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5e54b199"]]);
-export { Button as default };
+var rtyButton = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-5e54b199"]]);
+export { rtyButton as default };

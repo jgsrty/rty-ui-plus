@@ -1,5 +1,60 @@
-.main {
-  .test {
-    color: red
+.confirm-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(24, 24, 27, .2);
+  z-index: 98;
+  width: 100vw;
+  height: 100vh;
+}
+
+.confirm-container {
+  width: 35%;
+  padding: 20px;
+  border-radius: 5px;
+  background: $white;
+  position: fixed;
+  z-index: 99;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .title {
+    font-size: 18px;
   }
+
+  .title,
+  .content {
+    margin-bottom: 15px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: flex-end;
+
+    .rty-button-info {
+      margin-right: 10px;
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.up-enter-active,
+.up-leave-active {
+  transition: all .5s;
+}
+
+.up-enter-from,
+.up-leave-to {
+  opacity: 0;
+  transform: translate3d(-50%, 100px, 0);
 }

@@ -14,13 +14,12 @@ export default {
 };
 
 import rtyButton from "./src/button";
-import rtyConfirm from "./src/confirm";
 import rtySvg from "./src/svg";
 
 export {
   rtyButton,
-  rtyConfirm,
   rtySvg
 }
 
 export { rtyMessage } from './src/message'
+export { rtyConfirm } from './src/confirm'

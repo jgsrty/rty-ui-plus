@@ -6,7 +6,7 @@
 
 ```js
 <script setup>
-import {(rtyMessage, rtyButton)} from 'rty-ui-plus' 
+import { rtyMessage, rtyButton } from 'rty-ui-plus' 
 
 const testMsg = () => {
   rtyMessage({

@@ -1,2 +1,2 @@
-import Button from "./index2.js";
+import rtyButton from "./index2.js";
 export { default } from "./index2.js";
