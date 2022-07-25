@@ -64,6 +64,7 @@ const Error = () => {
 <script setup>
 import { rtyMessage, rtyButton } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
+import commentComp from '../vueComponents/comment.vue'
 
 const testMsg = () => {
   rtyMessage({
@@ -111,3 +112,5 @@ const Error = () => {
 | type     | 消息类型     | string | success |
 | message  | 消息提示文字 | string | --      |
 | duration | 消息显示时间 | number | 3000    |
+
+<commentComp />

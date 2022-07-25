@@ -75,6 +75,7 @@ import { ref, watch } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { rtySvg,rtyMessage } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
+import commentComp from '../vueComponents/comment.vue'
 
 const modules = import.meta.globEager('../node_modules/rty-ui-plus/src/assets/svg/*.svg')
 let svgArr = ref([])
@@ -139,3 +140,5 @@ watch(text,(textV) => {
   align-items:center
 }
 </style>
+
+<commentComp />
