@@ -6,14 +6,17 @@ const rtyConfirm = (title, content, cancelText, confirmText) => {
       content = title;
       title = "";
     }
+    const div = document.createElement("div");
+    const bodyDiv = document.body.appendChild(div);
     const close = () => {
-      render(null, document.body);
+      document.body.removeChild(bodyDiv);
+      render(null, bodyDiv);
     };
     const cancelHandler = () => {
-      reject(new Error("\u53D6\u6D88\u6309\u94AE\u70B9\u51FB"));
+      reject(false);
     };
     const confirmHandler = () => {
-      resovle();
+      resovle(true);
     };
     const vnode = h(confirmComponent, {
       title,
@@ -24,7 +27,7 @@ const rtyConfirm = (title, content, cancelText, confirmText) => {
       cancelHandler,
       confirmHandler
     });
-    render(vnode, document.body);
+    render(vnode, bodyDiv);
   });
 };
 export { rtyConfirm };

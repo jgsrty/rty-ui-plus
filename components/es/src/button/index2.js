@@ -1,7 +1,7 @@
 import { computed, ref, nextTick, openBlock, createElementBlock, normalizeClass, unref, createBlock, createCommentVNode, renderSlot } from "vue";
 import rtySvg from "../svg/index2.js";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
-import _export_sfc from "../_virtual/plugin-vue_export-helper.js";
+import _export_sfc from "../../_virtual/plugin-vue_export-helper.js";
 const _hoisted_1 = ["disabled"];
 const types = ["primary", "info", "success", "warning"];
 const sizes = {

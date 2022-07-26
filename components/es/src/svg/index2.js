@@ -100,7 +100,7 @@ import * as wine from "../assets/svg/wine.js";
 import * as zipTime from "../assets/svg/zip-time.js";
 import { useCssVars, unref, computed, openBlock, createBlock } from "vue";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
-import _export_sfc from "../_virtual/plugin-vue_export-helper.js";
+import _export_sfc from "../../_virtual/plugin-vue_export-helper.js";
 const _sfc_main = {
   __name: "index",
   props: {
