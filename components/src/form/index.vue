@@ -19,7 +19,6 @@ const props = defineProps({
     type: Object,
   },
 });
-console.log(props.rules);
 const fields = [];
 
 const addField = (field) => {
@@ -34,17 +33,37 @@ const validate = async (callback) => {
   validateField(undefined, callback);
 };
 const validateField = async (modelProps, callback) => {
-  const result = await doValidateField(modelProps);
-  console.log(result);
+  try {
+    const result = await doValidateField(modelProps);
+    console.log(result)
+    if (result) {
+      callback?.(result);
+    }
+    return result;
+  } catch (e) {
+    const invalidFields = e
+
+    // if (props.scrollToError) {
+    //   scrollToField(Object.keys(invalidFields)[0])
+    // }
+    callback?.(false, invalidFields)
+    return typeof(callback) !== 'function' && Promise.reject(invalidFields)
+  }
 };
 const doValidateField = async (props) => {
+  let validationErrors = {};
   for (const field of fields) {
     try {
       await field.validate("");
     } catch (err) {
-      console.log(err);
+      validationErrors = {
+        ...validationErrors,
+        ...fields,
+      };
     }
   }
+  if (Object.keys(validationErrors).length === 0) return true;
+  return Promise.reject(validationErrors);
 };
 
 watch(

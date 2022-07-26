@@ -50,7 +50,7 @@ const rtyFormRef = ref();
 
 const handleSubmit = async (form) => {
   await form.validate((valid, fields) => {
-    console.log(valid, fields);
+    // console.log(valid, fields);
   });
 };
 

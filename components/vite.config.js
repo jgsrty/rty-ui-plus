@@ -4,6 +4,9 @@ import svgLoader from "vite-svg-loader";
 const path = require("path");
 
 export default defineConfig({
+  server: {
+    port: 9527
+  },
   build: {
     target: "modules",
     //打包文件目录
