@@ -15,10 +15,15 @@ export default {
 
 import rtyButton from "./src/button";
 import rtySvg from "./src/svg";
+import rtyForm from "./src/form";
+
+const rtyFormItem = rtyForm.Item
 
 export {
   rtyButton,
-  rtySvg
+  rtySvg,
+  rtyForm,
+  rtyFormItem,
 }
 
 export { rtyMessage } from './src/message'

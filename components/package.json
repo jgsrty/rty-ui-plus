@@ -28,5 +28,8 @@
   "homepage": "https://github.com/jgsrty/rty-ui-plus#readme",
   "devDependencies": {
     "vite-svg-loader": "^3.4.0"
+  },
+  "dependencies": {
+    "async-validator": "4.2.5"
   }
 }
