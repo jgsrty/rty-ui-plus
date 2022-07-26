@@ -14,12 +14,8 @@
       </div>
       <!-- 按钮 -->
       <div class="button">
-        <rty-button size="mini" type="info" @click="onCancelClick">{{
-          cancelText
-        }}</rty-button>
-        <rty-button size="mini" type="primary" @click="onConfirmClick">{{
-          confirmText
-        }}</rty-button>
+        <rty-button size="mini" type="info" @click="onCancelClick">{{ cancelText }}</rty-button>
+        <rty-button size="mini" type="primary" @click="onConfirmClick">{{ confirmText }}</rty-button>
       </div>
     </div>
   </transition>
@@ -92,7 +88,6 @@ const close = () => {
     }
   }, duration);
 };
-
 </script>
 
 <style lang="scss" scoped>

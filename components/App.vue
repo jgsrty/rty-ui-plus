@@ -25,12 +25,14 @@ const test = (e) => {
 
 const testConfirm = () => {
   rtyConfirm('标题','内容风刀霜剑啊浪费的时间')
-    .then(() => {
+    .then((res) => {
+      console.log(res)
       rtyMessage({
         message:'点击确定按钮'
       })
     })
-    .catch(() => {
+    .catch((err) => {
+      console.log(err)
       rtyMessage({
         type:'plain',
         message:'点击取消按钮'

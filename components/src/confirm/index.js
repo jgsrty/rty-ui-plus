@@ -1,23 +1,26 @@
-import { h, render } from 'vue'
-import confirmComponent from './index.vue'
+import { h, render } from "vue";
+import confirmComponent from "./index.vue";
 
 export const rtyConfirm = (title, content, cancelText, confirmText) => {
   return new Promise((resovle, reject) => {
     if (title && !content) {
       // 用户没传递content 则title作为content
-      content = title
-      title = ''
+      content = title;
+      title = "";
     }
-
+    const div = document.createElement("div");
+    const bodyDiv = document.body.appendChild(div);
+    
     const close = () => {
-      render(null, document.body)
-    }
+      document.body.removeChild(bodyDiv);
+      render(null, bodyDiv);
+    };
     const cancelHandler = () => {
-      reject(new Error('取消按钮点击'))
-    }
+      reject(false);
+    };
     const confirmHandler = () => {
-      resovle()
-    }
+      resovle(true);
+    };
 
     const vnode = h(confirmComponent, {
       title,
@@ -26,8 +29,8 @@ export const rtyConfirm = (title, content, cancelText, confirmText) => {
       confirmText,
       close,
       cancelHandler,
-      confirmHandler
-    })
-    render(vnode, document.body)
-  })
-}
+      confirmHandler,
+    });
+    render(vnode, bodyDiv);
+  });
+};
