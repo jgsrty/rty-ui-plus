@@ -15,7 +15,7 @@
 <script setup>
 import { inject, onMounted, reactive, toRefs, ref, computed } from "vue";
 import AsyncValidator from "async-validator";
-import { get, set } from "lodash-unified";
+// import { get, set } from "lodash-unified";
 
 const props = defineProps({
   label: String,
@@ -48,7 +48,7 @@ const setValidationState = (state) => {
 };
 const onValidationSucceeded = () => {
   setValidationState("success");
-  formContext?.emit("validate", props.prop, true, "");
+  formContext.value?.emit("validate", props.prop, true, "");
 };
 const onValidationFailed = (error) => {
   const { errors, fields } = error;
@@ -60,8 +60,7 @@ const onValidationFailed = (error) => {
   validateMessage.value = errors
     ? errors?.[0]?.message ?? `${props.prop} is required`
     : "";
-
-  formContext?.emit("validate", props.prop, false, validateMessage.value);
+  formContext.value?.emit("validate", props.prop, false, validateMessage.value);
 };
 const doValidate = async (rules) => {
   const modelName = props.prop;

@@ -2,6 +2,17 @@
   <form @submit.prevent><slot /></form>
 </template>
 
+<script>
+const formEmits = {
+  validate: (prop, isValid, message) => {
+    console.log(prop)
+    console.log(isValid)
+    console.log(message)
+    return true;
+  },
+};
+</script>
+
 <script setup>
 import { provide, reactive, toRefs, watch } from "vue";
 
@@ -19,6 +30,8 @@ const props = defineProps({
     type: Object,
   },
 });
+const emits = defineEmits(formEmits);
+
 const fields = [];
 
 const addField = (field) => {
@@ -35,23 +48,24 @@ const validate = async (callback) => {
 const validateField = async (modelProps, callback) => {
   try {
     const result = await doValidateField(modelProps);
-    console.log(result)
     if (result) {
       callback?.(result);
     }
     return result;
   } catch (e) {
-    const invalidFields = e
+    const invalidFields = e;
 
     // if (props.scrollToError) {
     //   scrollToField(Object.keys(invalidFields)[0])
     // }
-    callback?.(false, invalidFields)
-    return typeof(callback) !== 'function' && Promise.reject(invalidFields)
+    callback?.(false, invalidFields);
+    return typeof callback !== "function" && Promise.reject(invalidFields);
   }
 };
 const doValidateField = async (props) => {
   let validationErrors = {};
+  console.log(props);
+  // if (!props) return true;
   for (const field of fields) {
     try {
       await field.validate("");
@@ -78,6 +92,7 @@ provide(
   "rty-form",
   reactive({
     ...toRefs(props),
+    emits,
     addField,
     removeField,
   })
