@@ -1,5 +1,10 @@
 <template>
-  <input class="rty-input" type="text" v-model="inputValue" @input="handleInput" />
+  <input
+    class="rty-input"
+    type="text"
+    v-model="inputValue"
+    @input="handleInput"
+  />
 </template>
 
 <script setup>
@@ -8,6 +13,7 @@ import { inject } from "vue";
 
 const props = defineProps({
   modelValue: {
+    type: [String, Number],
     default: "",
   },
 });

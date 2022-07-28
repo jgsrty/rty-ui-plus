@@ -1,8 +1,8 @@
-<!-- # Form 表单
+# Form 表单
 
 ## 基础用法
 
-<rty-form :model="formModel2">
+<rty-form :model="formModel2" ref="formtest">
   <rty-form-item label="账号">
     <rty-input v-model="formModel2.account"></rty-input>
   </rty-form-item>
@@ -13,7 +13,7 @@
     <rty-input v-model="formModel2.sex"></rty-input>
   </rty-form-item>
   <rty-form-item>
-    <rty-button size="small" @click="handleSubmit">submit</rty-button>
+    <rty-button size="small" @click="handleNormalSubmit">submit</rty-button>
   </rty-form-item>
 </rty-form>
 
@@ -29,7 +29,7 @@
     <rty-input v-model="formModel.sex"></rty-input>
   </rty-form-item>
   <rty-form-item>
-    <rty-button size="small" @click="handleNormalSubmit">submit</rty-button>
+    <rty-button size="small" @click="handleSubmit">submit</rty-button>
   </rty-form-item>
 </rty-form>
 
@@ -40,8 +40,8 @@ const formModel = reactive({
   sex: "",
 });
 
-const handleNormalSubmit = () => {
-    console.log(formModel.value);
+const handleSubmit = () => {
+    console.log(formModel);
 };
 </script>
 ```
@@ -59,8 +59,10 @@ const handleNormalSubmit = () => {
     <rty-input v-model="formModel.sex"></rty-input>
   </rty-form-item>
   <rty-form-item>
-    <rty-button size="small" @click="handleSubmit(rtyFormRef)">submit</rty-button>
-    <rty-button size="small" @click="resetValid(rtyFormRef)" type="info">reset</rty-button>
+    <div class="group-list">
+      <rty-button size="small" @click="handleSubmit(rtyFormRef)">submit</rty-button>
+      <rty-button size="small" @click="resetValid(rtyFormRef)" type="info">reset</rty-button>
+    </div>
   </rty-form-item>
 </rty-form>
 
@@ -108,6 +110,7 @@ const resetValid = async (form) => {
 ```
 
 <script setup>
+import {reactive,ref} from 'vue'
 import { rtyForm, rtyFormItem, rtyInput, rtyButton } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
 import commentComp from '../../vueComponents/comment.vue'
@@ -130,6 +133,7 @@ const rules = {
   ],
 };
 const rtyFormRef = ref();
+const formtest = ref();
 
 const handleSubmit = async (form) => {
   await form.validate((valid) => {
@@ -140,22 +144,39 @@ const resetValid = async (form) => {
   form.resetValid();
 };
 const handleNormalSubmit = () => {
-    console.log(formModel2.value);
+    console.log(formModel2);
 };
 </script>
 
 <style lang="scss" scoped>
 .group-list {
   display:flex;
-  justify-content:space-evenly;
-  align-items:center
+  align-items:center;
+  .rty-button:first-child {
+    margin-right:10px
+  }
 }
 </style>
 
 ## Form 配置项
 
-| 属性 | 说明 | 类型 | 默认值 |
-| ---- | ---- | ---- | ------ |
-|      |      |      |        |
+| 属性  | 说明         | 类型   | 默认值 |
+| ----- | ------------ | ------ | ------ |
+| model | 表单数据对象 | object | --     |
+| rules | 表单验证规则 | object | --     |
 
-<commentComp /> -->
+## Form 方法
+
+| 属性       | 说明                                             | 类型            |
+| ---------- | ------------------------------------------------ | --------------- |
+| validate   | 对整个表单的内容进行验证。 接收一个回调函数      | callback(valid) |
+| resetValid | 重置该表单项，将其值重置为初始值，并移除校验结果 | --              |
+
+## Form Item 配置项
+
+| 属性  | 说明                                                                  | 类型   | 默认值 |
+| ----- | --------------------------------------------------------------------- | ------ | ------ |
+| prop  | model 的键名。在定义了 validate、resetFields 的方法时，该属性是必填的 | string | --     |
+| label | 标签文本                                                              | --     |        |
+
+<commentComp />

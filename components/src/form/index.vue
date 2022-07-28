@@ -24,6 +24,9 @@ const addField = (field) => {
   fields.push(field);
 };
 const validate = (callback) => {
+  if (!props.rules) {
+    return;
+  }
   let validator = new AsyncValidator(props.rules);
   let validSuccess = true;
   validator.validate(props.model, (errors) => {

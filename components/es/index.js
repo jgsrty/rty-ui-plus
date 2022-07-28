@@ -2236,6 +2236,7 @@ const _sfc_main$4 = {
   __name: "index",
   props: {
     modelValue: {
+      type: [String, Number],
       default: ""
     }
   },
@@ -2260,7 +2261,7 @@ const _sfc_main$4 = {
     };
   }
 };
-var Input = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-7a523bac"]]);
+var Input = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-6fe7ff68"]]);
 var index$5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   "default": Input
@@ -3332,6 +3333,9 @@ const _sfc_main$3 = {
       fields.push(field);
     };
     const validate = (callback) => {
+      if (!props.rules) {
+        return;
+      }
       let validator = new Schema(props.rules);
       let validSuccess = true;
       validator.validate(props.model, (errors) => {

@@ -11,8 +11,20 @@
       <rty-input v-model="formModel.sex"></rty-input>
     </rty-form-item>
     <rty-form-item>
-      <rty-button size="small" @click="handleSubmit(rtyFormRef)">submit</rty-button>
-      <rty-button size="small" @click="resetValid(rtyFormRef)" type="info">reset</rty-button>
+      <rty-button size="small" @click="handleSubmit(rtyFormRef)"
+        >submit</rty-button
+      >
+      <rty-button size="small" @click="resetValid(rtyFormRef)" type="info"
+        >reset</rty-button
+      >
+    </rty-form-item>
+  </rty-form>
+  <rty-form :model="formModel2">
+    <rty-form-item label="账号">
+      <rty-input v-model="formModel2.account"></rty-input>
+    </rty-form-item>
+    <rty-form-item>
+      <rty-button size="small" @click="handleNormalSubmit">submit</rty-button>
     </rty-form-item>
   </rty-form>
   <!-- <div @click="testConfirm">test</div> -->
@@ -41,6 +53,11 @@ const formModel = reactive({
   password: "",
   sex: "",
 });
+const formModel2 = reactive({
+  account: "",
+  password: "",
+  sex: "",
+});
 const rules = {
   account: [{ required: true, message: "请输入账户名", trigger: "blur" }],
   password: [
@@ -64,6 +81,9 @@ const test = (e) => {
   console.log(1);
   console.log(e);
 };
+const handleNormalSubmit = () => {
+  console.log(formModel2)
+}
 
 const testConfirm = () => {
   rtyConfirm("标题", "内容风刀霜剑啊浪费的时间")
