@@ -23,8 +23,16 @@ export default {
           ],
         },
         {
-          text: "Components 组件",
+          text: "基础组件",
           items: getSidebar("components"),
+        },
+        {
+          text: "表单组件",
+          items: getSidebar("components/form"),
+        },
+        {
+          text: "反馈组件",
+          items: getSidebar("components/feedback"),
         },
       ],
     },

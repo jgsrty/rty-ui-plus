@@ -1,4 +1,5 @@
 <template>
+  <rty-input v-model="formModel.account"></rty-input>
   <rty-form :model="formModel" ref="rtyFormRef" :rules="rules">
     <rty-form-item label="账号" prop="account">
       <rty-input v-model="formModel.account"></rty-input>
@@ -31,7 +32,7 @@
 </template>
 
 <script setup>
-// import { rtyMessage, rtyConfirm, rtyForm, rtyFormItem } from "./index";
+import { rtyButton, rtyForm, rtyInput, rtyFormItem } from "./index";
 // import rtyConfirm from './src/confirm/index.vue'
 import { reactive, ref } from "vue";
 

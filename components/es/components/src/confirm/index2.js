@@ -1,7 +1,7 @@
 import { ref, onMounted, openBlock, createElementBlock, Fragment, createVNode, Transition, withCtx, createCommentVNode, toDisplayString, createElementVNode, createTextVNode } from "vue";
 import rtyButton from "../button/index2.js";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
-import _export_sfc from "../../_virtual/plugin-vue_export-helper.js";
+import _export_sfc from "../../../_virtual/plugin-vue_export-helper.js";
 const _hoisted_1 = {
   key: 0,
   class: "confirm-container"

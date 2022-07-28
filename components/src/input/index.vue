@@ -12,11 +12,11 @@ const props = defineProps({
   },
 });
 const emits = defineEmits(["update:modelValue"]);
-const formContext = inject("rty-form");
+const formContext = inject("rty-form", undefined);
 const inputValue = useVModel(props, "modelValue", emits);
 
 const handleInput = () => {
-  formContext.validate();
+  if (formContext) formContext.validate();
 };
 </script>
 

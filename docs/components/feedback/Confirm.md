@@ -22,7 +22,7 @@ const testConfirm = () => {
 <script setup>
 import { rtyConfirm, rtyButton, rtyMessage } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
-import commentComp from '../vueComponents/comment.vue'
+import commentComp from '../../vueComponents/comment.vue'
 
 const testConfirm = () => {
   rtyConfirm('标题','内容风刀霜剑啊浪费的时间')

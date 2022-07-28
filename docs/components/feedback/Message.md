@@ -64,7 +64,7 @@ const Error = () => {
 <script setup>
 import { rtyMessage, rtyButton } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
-import commentComp from '../vueComponents/comment.vue'
+import commentComp from '../../vueComponents/comment.vue'
 
 const testMsg = () => {
   rtyMessage({
