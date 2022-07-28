@@ -1,12 +1,13 @@
 <template>
-  <div>
+  <div class="rty-form-item">
     <div class="label">
+      <span v-if="prop" class="required">* </span>
       <slot name="label">{{ label }}</slot>
     </div>
     <div class="content">
       <slot />
       <slot name="error">
-        <div>{{ validateMessage }}</div>
+        <div class="err-msg">{{ validateMessage }}</div>
       </slot>
     </div>
   </div>
@@ -19,10 +20,6 @@ const props = defineProps({
   label: String,
   prop: {
     type: String,
-  },
-  required: {
-    type: Boolean,
-    default: false,
   },
 });
 
@@ -41,4 +38,6 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "./index.scss";
+</style>

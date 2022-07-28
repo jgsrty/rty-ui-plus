@@ -16,6 +16,8 @@ const props = defineProps({
   },
 });
 
+const initialModel = JSON.parse(JSON.stringify(props.model));
+
 const fields = [];
 
 const addField = (field) => {
@@ -31,7 +33,14 @@ const validate = (callback) => {
       formItem.validateMessage = (error && error.message) || "";
     });
   });
-  callback(validSuccess);
+  callback?.(validSuccess);
+};
+
+const resetValid = () => {
+  for (let key in props.model) {
+    props.model[key] = initialModel[key];
+  }
+  fields.forEach((formItem) => (formItem.validateMessage = ""));
 };
 
 provide(
@@ -39,11 +48,13 @@ provide(
   reactive({
     ...toRefs(props),
     addField,
+    validate,
   })
 );
 
 defineExpose({
   validate,
+  resetValid,
 });
 </script>
 

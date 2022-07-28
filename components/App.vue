@@ -1,16 +1,17 @@
 <template>
   <rty-form :model="formModel" ref="rtyFormRef" :rules="rules">
     <rty-form-item label="账号" prop="account">
-      <input type="text" v-model="formModel.account" />
+      <rty-input v-model="formModel.account"></rty-input>
     </rty-form-item>
     <rty-form-item label="密码" prop="password">
-      <input type="password" v-model="formModel.password" />
+      <rty-input v-model="formModel.password"></rty-input>
     </rty-form-item>
     <rty-form-item label="性别">
-      <input type="select" v-model="formModel.sex" />
+      <rty-input v-model="formModel.sex"></rty-input>
     </rty-form-item>
     <rty-form-item>
       <rty-button size="small" @click="handleSubmit(rtyFormRef)">submit</rty-button>
+      <rty-button size="small" @click="resetValid(rtyFormRef)" type="info">reset</rty-button>
     </rty-form-item>
   </rty-form>
   <!-- <div @click="testConfirm">test</div> -->
@@ -49,9 +50,13 @@ const rules = {
 const rtyFormRef = ref();
 
 const handleSubmit = async (form) => {
-  await form.validate((valid, fields) => {
-    console.log(valid, fields);
+  await form.validate((valid) => {
+    console.log(valid);
+    console.log(formModel);
   });
+};
+const resetValid = async (form) => {
+  form.resetValid();
 };
 
 const test = (e) => {

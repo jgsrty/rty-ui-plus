@@ -15,6 +15,7 @@ export default {
 
 import rtyButton from "./src/button";
 import rtySvg from "./src/svg";
+import rtyInput from "./src/input";
 import rtyForm from "./src/form";
 
 const rtyFormItem = rtyForm.Item
@@ -22,6 +23,7 @@ const rtyFormItem = rtyForm.Item
 export {
   rtyButton,
   rtySvg,
+  rtyInput,
   rtyForm,
   rtyFormItem,
 }

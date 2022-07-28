@@ -1,6 +1,6 @@
 {
   "name": "rty-ui-plus",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "rty vue3 ui",
   "main": "lib/index.js",
   "module": "es/index.js",
