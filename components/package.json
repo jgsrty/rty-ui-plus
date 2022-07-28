@@ -1,8 +1,7 @@
 {
   "name": "rty-ui-plus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "rty vue3 ui",
-  "main": "lib/index.js",
   "module": "es/index.js",
   "scripts": {
     "start": "vite",
@@ -30,8 +29,6 @@
     "vite-svg-loader": "^3.4.0"
   },
   "dependencies": {
-    "async-validator": "4.2.5",
-    "lodash-es": "^4.17.21",
-    "lodash-unified": "^1.0.2"
+    "async-validator": "4.2.5"
   }
 }
