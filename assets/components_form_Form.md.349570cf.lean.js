@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o}from"./app.0ce57b7b.js";const f=JSON.parse('{"title":"\u57FA\u7840\u7528\u6CD5","description":"","frontmatter":{},"headers":[],"relativePath":"components/form/Form.md","lastUpdated":1659014845000}'),r={name:"components/form/Form.md"};function a(n,s,c,m,p,d){return t(),o("div")}var i=e(r,[["render",a]]);export{f as __pageData,i as default};
