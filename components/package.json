@@ -2,7 +2,7 @@
   "name": "rty-ui-plus",
   "version": "0.1.2",
   "description": "rty vue3 ui",
-  "module": "es/index.js",
+  "module": "es/components/index.js",
   "scripts": {
     "start": "vite",
     "build": "vite build"
