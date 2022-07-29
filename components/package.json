@@ -29,7 +29,6 @@
     "vite-svg-loader": "^3.4.0"
   },
   "dependencies": {
-    "@vueuse/core": "^8.9.4",
     "async-validator": "4.2.5"
   }
 }
