@@ -84,7 +84,7 @@ for(const path in modules) {
   svgArr.value.push(itemArr[itemArr.length - 1].split('.')[0])
 }
 
-console.log(window.matchMedia('prefers-color-scheme: dark').matches)
+// console.log(window.matchMedia('prefers-color-scheme: dark').matches)
 const { text, copy, copied, isSupported } = useClipboard()
 watch(text,(textV) => {
   if(copied){
