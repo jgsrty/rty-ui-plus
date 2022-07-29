@@ -1,5 +1,5 @@
 import { inject, withDirectives, openBlock, createElementBlock, isRef, vModelText, unref } from "vue";
-import { useVModel } from "../../../node_modules/.pnpm/@vueuse_core@8.9.4_vue@3.2.37/node_modules/@vueuse/core/index.js";
+import { useVModel } from "../../../node_modules/.pnpm/@vueuse_core@8.9.4/node_modules/@vueuse/core/index.js";
 import "./index.vue_vue_type_style_index_0_scoped_true_lang.js";
 import _export_sfc from "../../../_virtual/plugin-vue_export-helper.js";
 const _sfc_main = {
