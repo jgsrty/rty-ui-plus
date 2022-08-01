@@ -9,6 +9,9 @@
   <rty-form-item label="密码">
     <rty-input v-model="formModel2.password"></rty-input>
   </rty-form-item>
+  <rty-form-item label="出生日期">
+    <rty-date-picker v-model="formModel2.birthday"></rty-date-picker>
+  </rty-form-item>
   <rty-form-item label="性别">
     <rty-input v-model="formModel2.sex"></rty-input>
   </rty-form-item>
@@ -37,6 +40,7 @@
 const formModel = reactive({
   account: "",
   password: "",
+  birthday: "",
   sex: "",
 });
 
@@ -54,6 +58,9 @@ const handleSubmit = () => {
   </rty-form-item>
   <rty-form-item label="密码" prop="password">
     <rty-input v-model="formModel.password"></rty-input>
+  </rty-form-item>
+  <rty-form-item label="出生日期" prop="birthday">
+    <rty-date-picker v-model="formModel.birthday"></rty-date-picker>
   </rty-form-item>
   <rty-form-item label="性别">
     <rty-input v-model="formModel.sex"></rty-input>
@@ -87,14 +94,16 @@ const handleSubmit = () => {
 const formModel = reactive({
   account: "",
   password: "",
+  birthday: "",
   sex: "",
 });
 const rules = {
-  account: [{ required: true, message: "请输入账户名", trigger: "blur" }],
+  account: [{ required: true, message: "请输入账户名", }],
   password: [
-    { required: true, message: "请输入密码", trigger: "blur" },
-    { min: 3, max: 6, message: "密码长度为3-6", trigger: "blur" },
+    { required: true, message: "请输入密码", },
+    { min: 3, max: 6, message: "密码长度为3-6", },
   ],
+  birthday: [{ required: true, message: "请选择生日", }],
 };
 const rtyFormRef = ref();
 
@@ -111,26 +120,29 @@ const resetValid = async (form) => {
 
 <script setup>
 import {reactive,ref} from 'vue'
-import { rtyForm, rtyFormItem, rtyInput, rtyButton } from 'rty-ui-plus'
+import { rtyForm, rtyFormItem, rtyInput, rtyButton, rtyDatePicker } from 'rty-ui-plus'
 import 'rty-ui-plus/es/style.css'
 import commentComp from '../../vueComponents/comment.vue'
 
 const formModel = reactive({
   account: "",
   password: "",
+  birthday: "",
   sex: "",
 });
 const formModel2 = reactive({
   account: "",
   password: "",
+  birthday: "",
   sex: "",
 });
 const rules = {
-  account: [{ required: true, message: "请输入账户名", trigger: "blur" }],
+  account: [{ required: true, message: "请输入账户名", }],
   password: [
-    { required: true, message: "请输入密码", trigger: "blur" },
-    { min: 3, max: 6, message: "密码长度为3-6", trigger: "blur" },
+    { required: true, message: "请输入密码", },
+    { min: 3, max: 6, message: "密码长度为3-6", },
   ],
+  birthday: [{ required: true, message: "请选择生日", }],
 };
 const rtyFormRef = ref();
 const formtest = ref();

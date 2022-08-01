@@ -1,13 +1,28 @@
 <template>
   <div class="rty-date-picker" ref="dateTarget">
-    <rty-input :placeholder="placeholder" v-model="inputValue" @click="showCalendar = !showCalendar" icon="calendar" class="input"></rty-input>
+    <rty-input
+      :placeholder="placeholder"
+      v-model="inputValue"
+      @click="showCalendar = !showCalendar"
+      icon="calendar"
+      class="input"
+    ></rty-input>
     <div class="calendar" v-show="showCalendar">
       <div class="header"></div>
       <div class="weeks"></div>
       <div class="date">
         <tbody>
           <tr v-for="(item, ind) in dateList" :key="ind">
-            <td @click="handleDayClick(date)" v-for="(date, dateInd) in item" :key="date + dateInd" :class="[date.disabled ? 'disble-date' : 'day-item', date.active ? 'active' : '', date.index === currentDay ? 'active-click' : '']">
+            <td
+              @click="handleDayClick(date)"
+              v-for="(date, dateInd) in item"
+              :key="date + dateInd"
+              :class="[
+                date.disabled ? 'disble-date' : 'day-item',
+                date.active ? 'active' : '',
+                date.index === currentDay ? 'active-click' : '',
+              ]"
+            >
               <span>{{ date.value }}</span>
             </td>
           </tr>
@@ -34,7 +49,11 @@ const props = defineProps({
 });
 const formContext = inject("rty-form", undefined);
 
-const emits = defineEmits(["changeDate", "update:modelValue", "updateInputValue"]);
+const emits = defineEmits([
+  "changeDate",
+  "update:modelValue",
+  "updateInputValue",
+]);
 const inputValue = useVModel(props, "modelValue", emits("update:modelValue"));
 const year = ref("");
 const month = ref("");
@@ -44,7 +63,10 @@ const dateList = ref([]);
 if (props.modelValue) {
   year.value = new Date(props.modelValue).getFullYear();
   month.value = new Date(props.modelValue).getMonth() + 1;
-  emits("update:modelValue", `${year.value}-${month.value}-${new Date(props.modelValue).getDate()}`);
+  emits(
+    "update:modelValue",
+    `${year.value}-${month.value}-${new Date(props.modelValue).getDate()}`
+  );
 } else {
   year.value = new Date(today).getFullYear();
   month.value = new Date(today).getMonth() + 1;

@@ -20,6 +20,10 @@ const handleSubmit = () => {
 </script>
 ```
 
+## 带图标
+
+<rty-input icon="email" v-model="modelValue"></rty-input>
+
 <script setup>
 import {ref} from 'vue'
 import {rtyInput} from 'rty-ui-plus'
@@ -34,5 +38,7 @@ const modelValue = ref('')
 | 属性    | 说明   | 类型          | 默认值 |
 | ------- | ------ | ------------- | ------ |
 | v-model | 绑定值 | string/number | --     |
+| icon | 图标 | [Icons](/components/Icon.html) | --   |
+| placeholder | 占位内容 | string | 请输入内容   |
 
 <commentComp />
