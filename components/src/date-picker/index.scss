@@ -1,0 +1,38 @@
+.rty-date-picker {
+  max-width: 400px;
+  .input {
+    width: 200px;
+  }
+  .calendar {
+    position: absolute;
+    z-index: 99;
+    background: $white;
+    .date {
+      td {
+        width: 40px;
+        height: 40px;
+        color: #606266;
+        font-weight: 400;
+        text-align: center;
+        cursor: pointer;
+      }
+      .disble-date {
+        cursor: not-allowed;
+        color: #c0c4cc;
+      }
+      .day-item.active {
+        color: $primary-color;
+        font-weight: bold;
+      }
+      .day-item.active-click>span {
+        display: inline-block;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        background-color: $primary-color;
+      }
+    }
+  }
+}

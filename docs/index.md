@@ -4,7 +4,7 @@ layout: home
 hero:
   name: rty-ui-plus
   text: support Vue3
-  tagline: developing...
+  tagline: continuous updating
   actions:
     - theme: brand
       text: Get Started

@@ -1,16 +1,28 @@
 .rty-input {
-  outline-style: none;
-  border: 1px solid #c0c4cc;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  font-family: "Microsoft soft";
-  &:focus {
-    border-color: $primary-color;
-    outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), $primary-color;
+  position: relative;
+  .input {
+    outline-style: none;
+    border: 1px solid #c0c4cc;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-family: "Microsoft soft";
+    &:focus {
+      border-color: $primary-color;
+      outline: 0;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), $primary-color;
+    }
+  }
+  .icon-input {
+    padding-left:32px
+  }
+  .svg-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
   }
 }
